@@ -7,7 +7,9 @@ class MainView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      // bottom naviation bar
+      // appbar
+      // body : ViewModel.bod
       body: body,
     );
   }
