@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fly_explorer/core/constant/navigation/navigation_constants.dart';
-import 'package:fly_explorer/view/welcome/main/view/main_view.dart';
-import 'package:fly_explorer/view/welcome/view/welcome_view.dart';
+import 'package:fly_explorer/feature/main/view/main_view.dart';
+import 'package:fly_explorer/feature/welcome/view/welcome_view.dart';
 
 class NavigationRoute {
   NavigationRoute._init();
