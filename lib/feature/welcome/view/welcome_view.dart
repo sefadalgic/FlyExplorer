@@ -15,54 +15,62 @@ class WelcomeView extends StatelessWidget {
       },
     );
   }
-  
 
   // TODO Paddings and margins should be defined in the constants file
   // TODO Localizations should be used for text
   Widget _buildBody(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 238, 225, 225),
-      appBar: AppBar(),
+      backgroundColor: const Color.fromARGB(255, 35, 32, 32),
+      appBar: AppBar(
+        backgroundColor: Colors.transparent,
+      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Column(
               children: [
-                Text(
-                  'FlyExplorer',
-                  style: Theme.of(context)
-                      .textTheme
-                      .titleLarge
-                      ?.copyWith(fontWeight: FontWeight.bold, fontSize: 45),
+                Padding(
+                  padding: const EdgeInsets.only(top: 40.0),
+                  child: Text(
+                    'Fly Explorer',
+                    style: Theme.of(context).textTheme.titleLarge?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 45,
+                        color: Colors.white),
+                  ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 20.0),
+                  padding:
+                      const EdgeInsets.only(top: 30.0, left: 20, right: 20),
                   child: Text(
-                    'Track flights in real time',
-                    style: Theme.of(context).textTheme.titleMedium,
+                    'Track flights in real time on a global map view',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context)
+                        .textTheme
+                        .bodyLarge
+                        ?.copyWith(color: Colors.white, fontSize: 25),
                   ),
                 ),
               ],
             ),
             //TODO Change Icon to Map Image
-            const Icon(
-              Icons.map,
-              size: 100,
-              color: Colors.black,
-            ),
+            const SizedBox(
+                width: 300,
+                child: Image(
+                  image: AssetImage('assets/image/welcome_plane.png'),
+                )),
             Padding(
-              padding: const EdgeInsets.only(bottom: 20.0),
+              padding: const EdgeInsets.only(bottom: 20.0, left: 20, right: 20),
               child: Container(
-                  width: 50,
+                  width: MediaQuery.of(context).size.width,
                   height: 50,
                   decoration: const BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.all(Radius.circular(10.0))),
-                  child: const Icon(
-                    Icons.airplanemode_active,
-                    size: 20,
-                    color: Colors.white,
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: const Text('Get Started'),
                   )),
             )
           ],
